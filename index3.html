@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+
+a = <input type="text" id="a">
+<br><br>
+b = <input type="text" id="b">
+<br><br>
+c = <input type="text" id="c">
+<br><br>
+<button onclick="check()">Check</button>
+
+<br><br>
+<p id="result"></p>
+
+<script>
+
+    function check() {
+
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let c = +document.getElementById('c').value;
+
+        let isInt = ( parseInt(a) == a && parseInt(b) == b && parseInt(c) == c);
+
+        if(!isInt){
+            document.getElementById('result').innerText = 'Nhap sai';
+        } else {
+            let max = a > b ? ( a > c ? a : c ) : ( b > c ? b : c);
+            document.getElementById('result').innerText = 'Max = ' + max;
+        }
+    }
+
+</script>
+
+</body>
+</html>

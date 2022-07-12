@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    let kiemTra = +prompt('Nhap diem kiem tra');
+    let giuaKy = +prompt('Nhap diem thi giua ky');
+    let cuoiKy = +prompt('Nhap diem thi cuoi ky');
+
+    let trungBinh = (kiemTra + giuaKy + cuoiKy) / 3
+
+    if (trungBinh > 8.5) {
+        alert('Hoc luc gioi');
+    } else if (trungBinh > 7) {
+        alert('Hoc luc kha');
+    } else if (trungBinh > 5){
+        alert('Hoc luc trung binh');
+    } else {
+        alert('Hoc luc kem')
+    }
+</script>
+
+</body>
+</html>
